@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/my_opengl_project.dir/src/main.cpp.o CMakeFiles/my_opengl_project.dir/dependencies/glad.c.o -o my_opengl_project  -lfreetype /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLU.so -lglfw -lGLEW 

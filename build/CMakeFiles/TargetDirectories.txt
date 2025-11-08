@@ -1,0 +1,3 @@
+/home/dev/projects_for_fun/opengl_projects/worldgen/build/CMakeFiles/my_opengl_project.dir
+/home/dev/projects_for_fun/opengl_projects/worldgen/build/CMakeFiles/edit_cache.dir
+/home/dev/projects_for_fun/opengl_projects/worldgen/build/CMakeFiles/rebuild_cache.dir
