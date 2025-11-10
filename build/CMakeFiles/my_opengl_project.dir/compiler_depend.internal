@@ -73,21 +73,21 @@ CMakeFiles/my_opengl_project.dir/dependencies/glad.c.o
 
 CMakeFiles/my_opengl_project.dir/src/main.cpp.o
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/main.cpp
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/config/ftconfig.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/config/ftheader.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/config/ftoption.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/config/ftstdlib.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/config/integer-types.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/config/mac-support.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/config/public-macros.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/freetype.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/fterrdef.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/fterrors.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/ftimage.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/ftmoderr.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/ftsystem.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/freetype/fttypes.h
- /home/dev/projects_for_fun/opengl_projects/freetype-2.14.1/include/ft2build.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/ftconfig.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/ftheader.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/ftoption.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/ftstdlib.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/integer-types.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/mac-support.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/public-macros.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/freetype.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fterrdef.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fterrors.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/ftimage.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/ftmoderr.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/ftsystem.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fttypes.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/ft2build.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glad.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/type_mat2x3.hpp
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/type_mat2x3.inl
@@ -283,7 +283,9 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/gtc/type_ptr.inl
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/shader.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/stb_image.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/biome.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/camera.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/chunk.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/text.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h
  /usr/include/GLFW/glfw3.h

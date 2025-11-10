@@ -110,22 +110,25 @@ int main()
          "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/textShader.fss");
 
 
-    Plane plane = createPlaneThroughTriangles(TRIANGLE_LENGTH, STANDARD_PLANE_LENGTH);
-    float *vertices= plane.vertices;
-    unsigned int *indices= plane.indices;
+    //Chunk chunk(TRIANGLE_LENGTH, STANDARD_PLANE_LENGTH, glm::vec3(0.0f,0.0f,0.0f));
 
     // for (const auto& pair : plane.heightMap) {
     //     std::cout << pair.first << " : " << pair.second << '\n';
     // }
 
-    glm::vec3 planePositions[] = {
-        glm::vec3( 0.0f,  0.0f,  0.0f),
-        glm::vec3(-250.0f, 0.0f, 0.0f),
-        glm::vec3(-250.0f, -250.0f, 0.0f),
-        glm::vec3(0.0f, -250.0f, 0.0f)
-        
-    };
+    World world;
 
+    world.updatePlayerPosition(glm::vec3(50.0,50.0,1.0));
+
+    world.updateChunks();
+
+    Chunk* chunk = world.chunks[0].get();
+
+
+    glm::vec3 planePositions[] = {
+        glm::vec3( 0.0f,  0.0f,  0.0f)
+ 
+    };
 
     // x y z
     // create a vector of of lines to demontrate the axis
@@ -174,10 +177,10 @@ int main()
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, plane.vertex_length * sizeof(float), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, chunk->vertexLength * sizeof(float), chunk->vertices.get(), GL_STATIC_DRAW);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, plane.indices_length * sizeof(unsigned int), indices, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, chunk->indicesLength * sizeof(unsigned int), chunk->indices.get(), GL_STATIC_DRAW);
 
     // position attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
@@ -285,7 +288,7 @@ int main()
     {
         // input
         // -----
-        processInput(window, plane.heightMap);
+        processInput(window, chunk->heightMap);
 
         // render
         // ------
@@ -310,11 +313,11 @@ int main()
 
         // render our plane
         glBindVertexArray(VAO);
-        for(unsigned int i = 0; i < 4; i++){
+        for(unsigned int i = 0; i < 1; i++){
             glm::mat4 model = glm::mat4(1.0f);
             model = glm::translate(model, planePositions[i]);
             ourShader.setMat4("model", model);
-            glDrawElements(GL_TRIANGLES, plane.indices_length , GL_UNSIGNED_INT,0);
+            glDrawElements(GL_TRIANGLES, chunk->indicesLength , GL_UNSIGNED_INT,0);
         }
 
         if(axisOn)
@@ -379,10 +382,6 @@ int main()
     // ------------------------------------------------------------------------
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-
-    // TODO: MAKE A BETTER APPROCH
-    delete[] plane.vertices;
-    delete[] plane.indices;
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------

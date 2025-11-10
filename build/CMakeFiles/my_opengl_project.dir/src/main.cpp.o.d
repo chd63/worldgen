@@ -407,6 +407,7 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/erase_if.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/biome.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h \
  /usr/include/c++/13/ciso646 /usr/include/c++/13/csetjmp \
  /usr/include/setjmp.h /usr/include/c++/13/cstdarg \
@@ -535,6 +536,7 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/bits/fs_dir.h \
  /usr/include/c++/13/bits/fs_ops.h /usr/include/c++/13/memory_resource \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/chunk.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/text.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/ft2build.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/ftheader.h \

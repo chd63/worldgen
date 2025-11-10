@@ -1,28 +1,6 @@
-// class world
-    // must have "bioms" which are size of nosie algorthems, these are squares
-    // bioms will have an origin that will demonstrate the 0,0 of the biom in the world
-    // this origin will be kept track of in the world space, the origin of a biom, will
-    // default to being 0,0
-        // bioms will be made up of planes
-            // planes are an object which contain vertices that will draw the world
-            // planes have a set width and there detail can also be set
-            // this is done through using a triangle length and plane length
-            // planes height will have to be effected by the "bioms"
-        // noise this will be how the heights are effected
-            // something like value noise is rendered this array will be the size
-            // of the biom, it will be a square
-        // biom generating logic
-            // according to the origin, and where the player is, we will calculate
-            // what planes need to be draw and with what detail
-            // there will be some other values here like    
-                // render distance
-                // plane size
-            // this rendering logic should be able to abjust to the position of the player
-            // so if the player gets into a new plane new planes must render
-    // world logic, the player must have some sort of global scope 
-    // data structures, the world class is one object, which will contain lots, of information
-    // on the world the random should come from outside this class, so it can be saved
 
+// seperate a lot of the classes into headers and implementation
+// will save a shit ton of time compiling because we wont have to recompile things
 
 // object class
     // this class has the obective of initilizing objects
