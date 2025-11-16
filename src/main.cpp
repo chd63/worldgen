@@ -10,12 +10,14 @@
 #include "camera.h"
 #include "worldgen.h"
 #include "text.h"
+#include "object.h"
+#include "texture.h"
 #include <ft2build.h>
 #include FT_FREETYPE_H  
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow *window, std::unordered_map<std::string ,float>& heightMap);
+void processInput(GLFWwindow *window, float** heightMap);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
@@ -109,21 +111,11 @@ int main()
     Shader textShader("/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/textShader.vss",
          "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/textShader.fss");
 
-
-    //Chunk chunk(TRIANGLE_LENGTH, STANDARD_PLANE_LENGTH, glm::vec3(0.0f,0.0f,0.0f));
-
-    // for (const auto& pair : plane.heightMap) {
-    //     std::cout << pair.first << " : " << pair.second << '\n';
-    // }
-
     World world;
+    
+    world.updatePlayerPosition(glm::vec3(0.0,0.0,1.0));
 
-    world.updatePlayerPosition(glm::vec3(50.0,50.0,1.0));
-
-    world.updateChunks();
-
-    Chunk* chunk = world.chunks[0].get();
-
+    world.updateChunks(); 
 
     glm::vec3 planePositions[] = {
         glm::vec3( 0.0f,  0.0f,  0.0f)
@@ -147,73 +139,43 @@ int main()
         0, 1 , 0 , 2 , 0, 2, 0, 3, 0, 4, 0, 5, 0, 6
     };
 
-    unsigned int VBO1, VAO1, EBO1;
-    glGenVertexArrays(1, &VAO1);
-    glGenBuffers(1, &VBO1);
-    glGenBuffers(1, &EBO1);
+    Object axis(axisVerticies, 42.0f, axisIndices, 14, glm::vec3(0.0f,0.0f,0.0f), 3, 3);
+    axis.createBuffers();
 
-    glBindVertexArray(VAO1);
+    // TODO: make sure this is deleteing buffers properly
+    // TODO: make sure this is deleteing buffers properly
+    // TODO: make sure this is deleteing buffers properly
+    // TODO: make sure this is deleteing buffers properly
+    // TODO: make sure this is deleteing buffers properly
+    // TODO: make sure this is deleteing buffers properly
+    // TODO: make sure this is deleteing buffers properly
+    std::vector<Object<float>> planeArray;
+    planeArray.reserve(world.numberOfChunks);
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO1);
-    glBufferData(GL_ARRAY_BUFFER, 42 * sizeof(float), axisVerticies, GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO1);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 14 * sizeof(unsigned int), axisIndices, GL_STATIC_DRAW);
-
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-
-
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-
-    glBindVertexArray(0);
-    
-    unsigned int VBO, VAO, EBO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
-
-    glBindVertexArray(VAO);
-
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, chunk->vertexLength * sizeof(float), chunk->vertices.get(), GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, chunk->indicesLength * sizeof(unsigned int), chunk->indices.get(), GL_STATIC_DRAW);
-
-    // position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(2 * sizeof(float)));
-    glEnableVertexAttribArray(1);
+    //Chunk* chunk = world.chunks[0].get();
+    for(int i =0; i < world.numberOfChunks; i++)
+    {
+        Chunk* chunks = world.chunks[i].get();
+        //std::cout << chunks->localOrigin.x << '\n';
+        planeArray.emplace_back(
+            std::move(chunks->vertices), 
+            chunks->vertexLength, 
+            std::move(chunks->indices), 
+            chunks->indicesLength, 
+            chunks->localOrigin
+        );
+        planeArray.back().createBuffers();
+        //std::cout << "Plane[" << i << "] verts=" << planeArray[i].vertexLength
+        //  << " inds=" << planeArray[i].indicesLength << " " << planeArray[i].worldPoint.x <<"\n";
+    }
+    //std::cout << world.biomes["0.000000 0.000000"].biomeData[10][10] << '\n';
 
     // TODO: implement textures
     // load and create a texture 
     // -------------------------
-    unsigned int texture1;
-    glGenTextures(1, &texture1);
-    glBindTexture(GL_TEXTURE_2D, texture1); // all upcoming GL_TEXTURE_2D operations now have effect on this texture object
-    // set the texture wrapping parameters
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    // set texture filtering parameters
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    // load image, create texture and generate mipmaps
-    int width, height, nrChannels;
-    // The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
-    unsigned char *data = stbi_load("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/brick.jpg", &width, &height, &nrChannels, 0);
-    if (data)
-    {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-    }
-    else
-    {
-        std::cout << "Failed to load texture" << std::endl;
-    }
-    stbi_image_free(data);
+    Texture snow("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/snow.jpg");
+    Texture grass("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/grass.jpg");
+    Texture dirt("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/dirt.jpg");
 
     FT_Set_Pixel_Sizes(face, 0, 48);  
 
@@ -264,7 +226,7 @@ int main()
     // enable belending
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); 
-
+    
     // get space for the text objects
     unsigned int VAO3, VBO3;
     glGenVertexArrays(1, &VAO3);
@@ -276,49 +238,60 @@ int main()
     glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);  
-
+    
     // uncomment this call to draw in wireframe polygons. 1/2
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    
     ourShader.use();
-
+    
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
     {
         // input
         // -----
-        processInput(window, chunk->heightMap);
 
+        // check position update biomeData map, may need to move around
+        // TODO: make this more efficent
+        world.updatePlayerPosition(glm::vec3(camera.Position.x,camera.Position.y,1.0));
+
+        //std::cout << camera.Position.x <<  " " << camera.Position.y <<'\n';
+        //std::cout << world.returnCurrentBiomeArrayByPosition(camera.Position).biomeData[25][25] << "\n";
+        processInput(window, world.returnCurrentBiomeArrayByPosition(camera.Position).biomeData);
+        
         // render
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+        
         // activate shader use
         ourShader.use();
 
+        grass.bind(GL_TEXTURE0);
         ourShader.setInt("texture1", 0);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, texture1);
-
+        snow.bind(GL_TEXTURE1);
+        ourShader.setInt("texture2", 1);
+        dirt.bind(GL_TEXTURE2);
+        ourShader.setInt("texture3", 2);
+        
         // pass projection matrix to shader (note that in this case it could change every frame)
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 10000.0f);
         ourShader.setMat4("projection", projection);
-
+        
         // camera/view transfomration
         glm::mat4 view = camera.GetViewMatrix();
         ourShader.setMat4("view",view);
-
-
+        
+        
         // render our plane
-        glBindVertexArray(VAO);
-        for(unsigned int i = 0; i < 1; i++){
+        //glBindVertexArray(plane.VAO);
+        for(unsigned int i = 0; i < world.numberOfChunks; i++){
+            glBindVertexArray(planeArray[i].VAO);
             glm::mat4 model = glm::mat4(1.0f);
-            model = glm::translate(model, planePositions[i]);
+            model = glm::translate(model, planeArray[i].worldPoint);
             ourShader.setMat4("model", model);
-            glDrawElements(GL_TRIANGLES, chunk->indicesLength , GL_UNSIGNED_INT,0);
+            glDrawElements(GL_TRIANGLES, planeArray[i].indicesLength , GL_UNSIGNED_INT,0);
         }
+        glBindVertexArray(0);
 
         if(axisOn)
         {
@@ -327,10 +300,10 @@ int main()
             axisShader.setMat4("projection", projection);
             axisShader.setMat4("view",view);
             // render axis
-            glBindVertexArray(VAO1);
             glLineWidth(5.0f);
             axisShader.setMat4("model", glm::mat4(1.0f));
-            glDrawElements(GL_LINES, sizeof(axisIndices)/sizeof(unsigned int), GL_UNSIGNED_INT, 0);
+            glBindVertexArray(axis.VAO);
+            glDrawElements(GL_LINES,axis.indicesLength, GL_UNSIGNED_INT, 0);
             // reset to default
             glLineWidth(1.0f); 
 
@@ -357,20 +330,42 @@ int main()
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;  
 
-        if(framesOn == true){
-            elapsed += deltaTime;
-            frame_tracker++;
+        elapsed += deltaTime;
+        frame_tracker++;
             
-            if (elapsed >= 1.0f){
+        if (elapsed >= 1.0f){
+            if(framesOn)
                 frameCountText = std::to_string(frame_tracker);
-                //std::cout << frame_tracker << "\n";
+            //std::cout << frame_tracker << "\n";
 
-                frame_tracker = 0;
-                elapsed = 0.0f;
+            world.updateChunks(); 
+
+            planeArray.clear();
+            planeArray.shrink_to_fit();
+            planeArray.reserve(world.numberOfChunks);
+            for(int i =0; i < world.numberOfChunks; i++)
+            {
+                Chunk* chunks = world.chunks[i].get();
+                //std::cout << chunks->localOrigin.x << '\n';
+                planeArray.emplace_back(
+                    std::move(chunks->vertices), 
+                    chunks->vertexLength, 
+                    std::move(chunks->indices), 
+                    chunks->indicesLength, 
+                    chunks->localOrigin
+                );
+                planeArray.back().createBuffers();
+                //std::cout << "Plane[" << i << "] verts=" << planeArray[i].vertexLength
+                //<< " inds=" << planeArray[i].indicesLength << " " << planeArray[i].worldPoint.x <<"\n";
             }
-            RenderText(textShader, Characters, VAO3, VBO3, frameCountText,
-                     25.0f, 25.0f, 0.8f , glm::vec3(0.5, 0.8f, 0.2f));            
+
+            frame_tracker = 0;
+            elapsed = 0.0f;
         }
+
+        if(framesOn)
+            RenderText(textShader, Characters, VAO3, VBO3, frameCountText,
+                    25.0f, 25.0f, 0.8f , glm::vec3(0.5, 0.8f, 0.2f));            
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
@@ -380,8 +375,14 @@ int main()
 
     // optional: de-allocate all resources once they've outlived their purpose:
     // ------------------------------------------------------------------------
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
+    for(int i = 0; i < world.numberOfChunks; i++)
+    {
+        planeArray[i].deleteBuffers();
+    }
+    axis.deleteBuffers();
+    glDeleteVertexArrays(1, &VAO3);
+    glDeleteBuffers(1, &VBO3);
+
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
@@ -391,7 +392,7 @@ int main()
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
-void processInput(GLFWwindow *window, std::unordered_map<std::string ,float>& heightMap)
+void processInput(GLFWwindow *window, float** heightMap)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);

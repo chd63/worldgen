@@ -8,7 +8,15 @@
 class Biome{
 public:
     // 2d array of noise
+
+    // MAKE SURE THIS IS SAFELY DELETED WHENEVER YOU USE IT
+    // MAKE SURE THIS IS SAFELY DELETED WHENEVER YOU USE IT
+    // MAKE SURE THIS IS SAFELY DELETED WHENEVER YOU USE IT
+    // MAKE SURE THIS IS SAFELY DELETED WHENEVER YOU USE IT
+    // MAKE SURE THIS IS SAFELY DELETED WHENEVER YOU USE IT
+    // values are flipped rn I should probably fix this
     float** biomeData = nullptr;
+
     glm::vec2 origin;
     unsigned int sideLength;
     unsigned int step;
@@ -38,6 +46,15 @@ public:
 
 private:
 
+    //TODO :FIX THIS YOU RETARD
+    //TODO :FIX THIS YOU RETARD
+    //TODO :FIX THIS YOU RETARD
+    //TODO :FIX THIS YOU RETARD
+    //TODO :FIX THIS YOU RETARD
+    //TODO :FIX THIS YOU RETARD 
+    // TODO : the values are fliped for the array it goes y then x
+    // probably should fix this
+    // I think this is a bigger issue with the chunk or something 
     float** createNoise()
     {
         // large step few grid points, smooth
@@ -48,8 +65,11 @@ private:
         float randomNumberArray[randomSideLength][randomSideLength];
 
         // set random gen -> this can be improved
-        std::default_random_engine gen;
-        std::uniform_real_distribution<float> distribution(distroLow, distroHigh);  
+        // std::default_random_engine gen;
+        // std::uniform_real_distribution<float> distribution(distroLow, distroHigh);  
+        std::random_device rd;
+        std::default_random_engine gen(rd());
+        std::uniform_real_distribution<float> distribution(distroLow, distroHigh);
 
         // create a 2d array that will have random values for each point
         for(int i = 0; i < randomSideLength; i++)
@@ -88,7 +108,16 @@ private:
                 float ix1 = lerp(v01 , v11 , tx);
                 float value = lerp(ix0, ix1, ty);
 
-                finilizedArray[y][x] = value;
+                // need to fix this meshing together
+                if(x > sideLength - 3 ||  y > sideLength - 3 || x < 3 || y  < 3)
+                {
+                    finilizedArray[y][x] = 0.0f;
+                }
+                else
+                {
+                    finilizedArray[y][x] = value;
+                }
+                
             }
         }  
 

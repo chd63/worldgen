@@ -286,7 +286,9 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/biome.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/camera.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/chunk.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/object.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/text.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h
  /usr/include/GLFW/glfw3.h
  /usr/include/KHR/khrplatform.h

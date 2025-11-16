@@ -284,7 +284,9 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/biome.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/camera.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/chunk.h \
+  /home/dev/projects_for_fun/opengl_projects/worldgen/src/object.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/text.h \
+  /home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/KHR/khrplatform.h \
@@ -806,6 +808,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/locale.h:
 
 /usr/include/linux/limits.h:
+
+/usr/include/linux/close_range.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_relational.hpp:
 
@@ -1507,6 +1511,14 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/src/camera.h:
 
+/home/dev/projects_for_fun/opengl_projects/worldgen/src/object.h:
+
+/home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h:
+
+/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/vec3.hpp:
+
+/usr/include/c++/13/ext/concurrence.h:
+
 /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_int3.hpp:
@@ -1660,6 +1672,10 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/c++/13/bits/parse_numbers.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/c++/13/bits/std_abs.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_float4_precision.hpp:
 
@@ -1863,10 +1879,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/c++/13/debug/debug.h:
 
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/linux/errno.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/c++/13/deque:
@@ -1898,10 +1910,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/mat3x4.hpp:
 
 /usr/include/c++/13/ext/atomicity.h:
-
-/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/vec3.hpp:
-
-/usr/include/c++/13/ext/concurrence.h:
 
 /usr/include/c++/13/ext/string_conversions.h:
 
@@ -1994,5 +2002,3 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/c++/13/variant:
 
 /usr/include/errno.h:
-
-/usr/include/linux/close_range.h:

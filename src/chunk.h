@@ -22,6 +22,8 @@ public:
     float triangleLength = 0.05f;
     float planeLength = 1.0f;
 
+    Chunk(){}
+
     // constructor( float triangleLength, float planeLength, origin, heightmap)
     //, float** noise2dArray
     Chunk(float trianglelength, float planelength, glm::vec3 origin)
@@ -50,14 +52,27 @@ private:
         unsigned int vertex_index = 0;
         vertexLength = sideLength * sideLength  * (VERTEX_COUNT + 2);
         vertices = std::make_unique<float[]>(vertexLength);
-
         int textureCourner = 0;
 
+        // for each chunk I should mkae a temp local that we use
+        // this is in respect to the biome 
+        int tempOriginX = (int)localOrigin.x;
+        int tempOriginY = (int)localOrigin.y;
+
+        // THIS IS HACK
+        // THIS IS HACK
+        // THIS IS HACK
+        // THIS IS HACK
+        if(tempOriginX < 0)
+            tempOriginX = 1024 + tempOriginX - 1; // 512 is length of a biome, this needs to be updated, so its not a magic number
+        if(tempOriginY < 0)
+            tempOriginY = 1024 + tempOriginY - 1;
+ 
         //col
-        for(unsigned int i = 0; i < sideLength ; i++)
+        for(int i = 0; i < sideLength ; i++)
         {   
             // row
-            for(unsigned int j = 0; j < sideLength ; j++)
+            for(int j = 0; j < sideLength ; j++)
             {
                 vertices[vertex_index] = static_cast<float>(j * tLength);
                 vertices[vertex_index + 1] = static_cast<float>(i * tLength);
@@ -66,20 +81,19 @@ private:
                     vertices[vertex_index + 2] = 0.0f;
                 else
                 {
-                    vertices[vertex_index + 2] = heightArray[(int)localOrigin.x + j][(int)localOrigin.y + i];
-                    //std::cout << heightArray[(int)localOrigin.x + j][(int)localOrigin.y + i] << '\n';
+                    vertices[vertex_index + 2] = heightArray[tempOriginY + i][tempOriginX + j];
                 }
 
                 vertices[vertex_index + 3] = static_cast<float>(j * tLength);
                 vertices[vertex_index + 4] = static_cast<float>(i * tLength);
 
-                std::string temp= std::to_string(i) + " " + std::to_string(j);
-                if(heightArray == nullptr)
-                    heightMap[temp] =  0.0f;
-                else
-                {
-                    heightMap[temp] = heightArray[(int)localOrigin.x + j][(int)localOrigin.y + i];
-                }
+                // std::string temp= std::to_string(i) + " " + std::to_string(j);
+                // if(heightArray == nullptr)
+                //     heightMap[temp] =  0.0f;
+                // else
+                // {
+                //     heightMap[temp] = heightArray[tempOriginY + i][tempOriginX + j];
+                // }
 
                 vertex_index = vertex_index + VERTEX_COUNT + 2;
             }

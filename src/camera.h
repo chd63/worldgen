@@ -72,7 +72,7 @@ public:
         return glm::lookAt(Position, Position + Front, Up);
     }
     // processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
-    void ProcessKeyboard(Camera_Movement direction, float deltaTime, std::unordered_map<std::string ,float>& heightMap, float vertexSize = 0)
+    void ProcessKeyboard(Camera_Movement direction, float deltaTime, float** heightMap, float vertexSize = 0)
     {
         if(direction == SPEED_INCREASE)
             MovementSpeed += .25;
@@ -104,15 +104,25 @@ public:
         // we want to make x = 0
         if(fpsFlag)
         {
-            unsigned int x = std::floor((Position.x / vertexSize));
-            unsigned int y = std::floor((Position.y / vertexSize));
+            int x = std::floor((Position.x / vertexSize));
+            int y = std::floor((Position.y / vertexSize));
+
+            // THIS IS HACK
+            // THIS IS HACK
+            // THIS IS HACK
+            // THIS IS HACK
+            // the minus 1 is because we want to start one prior
+            if(x < 0)
+                x = 1024 + x - 1; // 512 is length of a biome, this needs to be updated, so its not a magic number
+            if(y < 0)
+                y = 1024 + y - 1; 
 
             std::string temp = std::to_string(y) + " " + std::to_string(x) ;
-            std::cout << temp << '\n';
+            //std::cout << temp << '\n';
             try
             {
-                std::cout << heightMap.at(temp) << '\n';
-                Position.z = heightMap.at(temp) + 2.0f;
+                //std::cout << heightMap[y][x] << '\n';
+                Position.z = heightMap[y][x] + 2.0f;
             }
             catch (...) {
                 std::cout << "value out of range" << '\n';

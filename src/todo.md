@@ -2,6 +2,16 @@
 // seperate a lot of the classes into headers and implementation
 // will save a shit ton of time compiling because we wont have to recompile things
 
+// im pretty sure there is a mega memory leak when using Biome's biomeData
+// would probably be good to prevent that
+
+// figure out solution for heightmap'
+
+// the solution is to use the biomes out of the biomes map
+// we are going to have to use the method of taking the world positions
+// then get the map based off of that and push it into the movment and 
+// camera code
+
 // object class
     // this class has the obective of initilizing objects
     // it gives a layout of what objects will defaultly have

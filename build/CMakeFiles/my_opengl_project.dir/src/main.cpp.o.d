@@ -552,4 +552,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: \
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/ftimage.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fterrors.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/ftmoderr.h \
- /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fterrdef.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fterrdef.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/object.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h

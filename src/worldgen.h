@@ -7,21 +7,21 @@ class World
 {
 public:
     // variables & data
-    const int step = 8;
+    const int step = 32;
     const int distroLow = -10.0f;
-    const int distroHigh = 20.0f;
+    const int distroHigh = 40.0f;
 
     // render distance
     unsigned int renderDistance = 4;
     float numberOfBiomes = 4;
-    float biomeSideLength = 512;
+    float biomeSideLength = 1024;
     std::unordered_map<std::string, Biome> biomes;
 
     glm::vec3 playerPosition = glm::vec3(0.0f,0.0f,0.0f);
 
     float chunkSize = 32.0f;
-    float triangleSize = 1.0f;
-    int numberOfChunks = 9;
+    float triangleSize = 1.0f; // TODO: make a constructor to change this
+    int numberOfChunks = 25;
     std::vector<std::unique_ptr<Chunk>> chunks;
 
     // constructor
@@ -58,6 +58,10 @@ public:
         playerPosition = newPlayerPos;
     }
 
+    //TODO :update this after fixing biomes
+    // if you have a world position at like anything not postive it breaks
+    // rn it works with 50 x 50 y but if you go smaller it tweaks
+
     // update chunck info
     void updateChunks()
     {
@@ -67,30 +71,29 @@ public:
         chunks.reserve(numberOfChunks);
         
         // we will have a center chunk where we will check the values of the player position
-        float originX = ( std::floor(playerPosition.x / chunkSize) * chunkSize) - chunkSize ;
-        float originY = (std::floor(playerPosition.y / chunkSize) * chunkSize) - chunkSize;
-
-        // get the biome
-        float bx = ( std::floor(originX / biomeSideLength) * biomeSideLength);
-        float by = ( std::floor(originY / biomeSideLength) * biomeSideLength);
-        std::string key= std::to_string(bx) + " " + std::to_string(by);
-        //std::cout << key << '\n';
-        //std::cout << biomes[key].biomeData[15][25] << '\n';
+        float originX = (std::floor(playerPosition.x  / chunkSize)* chunkSize) - (((std::sqrt(numberOfChunks) - 1 ) / 2) * chunkSize);
+        float originY = (std::floor(playerPosition.y  / chunkSize)* chunkSize) - (((std::sqrt(numberOfChunks) - 1 ) / 2) * chunkSize);
 
         int sideLength =int(std::sqrt(numberOfChunks));
         int sideValue = 0;
         for(int x = 0; x < numberOfChunks; x++ )
         {
-            //std::cout << originX << " " << originY << '\n';
+            // get the biome
+            float bx = ( std::floor(originX / biomeSideLength) * biomeSideLength);
+            float by = ( std::floor(originY / biomeSideLength) * biomeSideLength);
+            std::string key= std::to_string(bx) + " " + std::to_string(by);
+            //std::cout << key << '\n';
+            //std::cout << biomes[key].biomeData[15][25] << '\n';
+
             // get the y value of the specific input
+            // std::cout << originX << " " << originY << '\n';
             chunks.push_back(std::make_unique<Chunk>( triangleSize, chunkSize,glm::vec3(originX,originY, 0.0f ), biomes[key].biomeData));
-            
 
             if(sideValue == sideLength - 1)
             {
                 sideValue = 0;
                 originY += chunkSize;
-                originX = ( std::floor(playerPosition.x / chunkSize) * chunkSize) - chunkSize;
+                originX = (std::floor(playerPosition.x  / chunkSize)* chunkSize) - (((std::sqrt(numberOfChunks) - 1 ) / 2) * chunkSize);
                 bx = ( std::floor(originX / biomeSideLength) * biomeSideLength);
                 by = ( std::floor(originY / biomeSideLength) * biomeSideLength);
 
@@ -107,6 +110,15 @@ public:
         }
 
         //std::cout << chunks[0]->localOrigin.x << '\n';
+    }
+
+    Biome returnCurrentBiomeArrayByPosition(glm::vec3 playerPos)
+    {
+        float x = std::floor((playerPos.x / biomeSideLength)) * biomeSideLength;
+        float y = std::floor((playerPos.y / biomeSideLength)) * biomeSideLength;
+        std::string temp = std::to_string(y) + " " + std::to_string(x) ;
+        //std::cout << temp << '\n';
+        return biomes[temp];
     }
 
 private:
