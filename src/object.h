@@ -13,6 +13,7 @@ public:
     std::unique_ptr<T[]> vertexArray;
     std::unique_ptr<unsigned int[]> indicesArray;
     glm::vec3 worldPoint;
+    glm::vec2 worldPoint2D;
     int vertexLength;
     int indicesLength;
     unsigned int VBO, VAO, EBO;
@@ -23,6 +24,21 @@ public:
 
     Object(){}
 
+    // TODO: implement 2d objects
+    Object(T* vertexarray, unsigned int vertexlength, unsigned int* indicesarray, unsigned int indiceslength, glm::vec2 worldpoint)
+    {
+
+        vertexArray = std::make_unique<T[]>(vertexlength);
+        std::copy(vertexarray, vertexarray + vertexlength, vertexArray.get());
+        
+        indicesArray = std::make_unique<unsigned int[]>(indiceslength);
+        std::copy(indicesarray, indicesarray + indiceslength, indicesArray.get());
+
+        vertexLength = vertexlength;
+        indicesLength = indiceslength;
+        worldPoint2D = worldpoint;
+    } 
+
     Object(std::unique_ptr<T[]> vertexarray, unsigned int vertexlength, std::unique_ptr<unsigned int[]> indicesarray, unsigned int indiceslength, glm::vec3 worldpoint)
     {
         vertexArray = std::move(vertexarray);
@@ -32,6 +48,7 @@ public:
         worldPoint = worldpoint;
     } 
 
+
     Object(std::unique_ptr<T[]> vertexarray, unsigned int vertexlength, std::unique_ptr<unsigned int[]> indicesarray, unsigned int indiceslength, glm::vec3 worldpoint,
         int offsetpershape, int offsetpertexture)
     {
@@ -40,6 +57,23 @@ public:
         indicesArray = std::move(indicesarray);
         indicesLength = indiceslength;
         worldPoint = worldpoint;
+        offsetPerShape = offsetpershape;
+        offsetPerTexture = offsetpertexture;
+        totalOffset = offsetpershape + offsetpertexture;
+
+    } 
+
+    Object(T* vertexarray, unsigned int vertexlength, unsigned int* indicesarray, unsigned int indiceslength, glm::vec2 worldpoint,
+        int offsetpershape, int offsetpertexture)
+    {
+        vertexArray = std::make_unique<T[]>(vertexlength);
+        std::copy(vertexarray, vertexarray + vertexlength, vertexArray.get());
+        
+        indicesArray = std::make_unique<unsigned int[]>(indiceslength);
+        std::copy(indicesarray, indicesarray + indiceslength, indicesArray.get());
+        vertexLength = vertexlength;
+        indicesLength = indiceslength;
+        worldPoint2D = worldpoint;
         offsetPerShape = offsetpershape;
         offsetPerTexture = offsetpertexture;
         totalOffset = offsetpershape + offsetpertexture;
@@ -62,6 +96,7 @@ public:
         totalOffset = offsetpershape + offsetpertexture;
 
     } 
+
 
     void createBuffers()
     {   

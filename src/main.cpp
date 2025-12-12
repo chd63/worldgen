@@ -12,9 +12,23 @@
 #include "text.h"
 #include "object.h"
 #include "texture.h"
+#include "enemy.h"
 #include <ft2build.h>
 #include FT_FREETYPE_H  
 
+//TODO: fix cordinate plane direction back to opengl standards
+//TODO: fix cordinate plane direction back to opengl standards
+//TODO: fix cordinate plane direction back to opengl standards
+//TODO: fix cordinate plane direction back to opengl standards
+//TODO: fix cordinate plane direction back to opengl standards
+//TODO: fix cordinate plane direction back to opengl standards
+//TODO: fix cordinate plane direction back to opengl standards
+//TODO: fix cordinate plane direction back to opengl standards
+
+//TODO: fix the cleanup in multiple classes with class destructors (~)
+//TODO: fix the cleanup in multiple classes with class destructors (~)
+//TODO: fix the cleanup in multiple classes with class destructors (~)
+//TODO: fix the cleanup in multiple classes with class destructors (~)
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window, float** heightMap);
@@ -25,8 +39,11 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 const unsigned int SCR_WIDTH = 1280;
 const unsigned int SCR_HEIGHT = 960;
 
+// should set values for world building
+float biomesize = 512;
+
 // camera
-Camera camera(glm::vec3(0.0f,0.0f,0.5f),glm::vec3(0.0f, 0.0f, 1.0f));  
+Camera camera(glm::vec3(0.0f,0.0f,0.5f),glm::vec3(0.0f, 0.0f, 1.0f), biomesize);  
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -39,6 +56,7 @@ float elapsed = 0.0f;
 int frame_tracker = 0;
 bool framesOn = true;
 bool axisOn = false;
+bool jumpscareFlag = false;
 std::string frameCountText = "DEFAULT";
 const float STANDARD_PLANE_LENGTH = 250.0;
 const float TRIANGLE_LENGTH = 1.0;
@@ -111,16 +129,9 @@ int main()
     Shader textShader("/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/textShader.vss",
          "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/textShader.fss");
 
-    World world;
-    
-    world.updatePlayerPosition(glm::vec3(0.0,0.0,1.0));
+    Shader jumpShader("/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/jumpScare.vss",
+         "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/jumpScare.fss");
 
-    world.updateChunks(); 
-
-    glm::vec3 planePositions[] = {
-        glm::vec3( 0.0f,  0.0f,  0.0f)
- 
-    };
 
     // x y z
     // create a vector of of lines to demontrate the axis
@@ -142,17 +153,39 @@ int main()
     Object axis(axisVerticies, 42.0f, axisIndices, 14, glm::vec3(0.0f,0.0f,0.0f), 3, 3);
     axis.createBuffers();
 
-    // TODO: make sure this is deleteing buffers properly
-    // TODO: make sure this is deleteing buffers properly
-    // TODO: make sure this is deleteing buffers properly
-    // TODO: make sure this is deleteing buffers properly
-    // TODO: make sure this is deleteing buffers properly
-    // TODO: make sure this is deleteing buffers properly
+    // need to fix this so its less ass
+    float quadVertices[] = {
+        // pos       // tex
+        0, 0,      0.0f, 0.0f,
+        800, 0,     1.0f, 0.0f,
+        800, 800,    1.0f, 1.0f,
+        0, 800,     0.0f, 1.0f
+    };
+
+    unsigned int squareIn[] = {  // note that we start from 0!
+        0, 1, 3,  // first Triangle
+        1, 2, 3   // second Triangle
+    };
+
+    Object jumpScare(quadVertices, 16, squareIn, 6, glm::vec2(0.0f,0.0f),2,2);
+    jumpScare.createBuffers();
+
+    // create world
+
+    //World world;
+    // I should make a struct that I can pull these from 
+    // or variables at the top
+    World world(16, biomesize, 16, 9 ,64);
+
+    world.updatePlayerPosition(glm::vec3(0.0,0.0,1.0));
+
+    world.updateChunks(); 
+
     // TODO: make sure this is deleteing buffers properly
     std::vector<Object<float>> planeArray;
     planeArray.reserve(world.numberOfChunks);
 
-    //Chunk* chunk = world.chunks[0].get();
+    // this should be put into the world class
     for(int i =0; i < world.numberOfChunks; i++)
     {
         Chunk* chunks = world.chunks[i].get();
@@ -170,17 +203,18 @@ int main()
     }
     //std::cout << world.biomes["0.000000 0.000000"].biomeData[10][10] << '\n';
 
-    // TODO: implement textures
-    // load and create a texture 
-    // -------------------------
+    // TODO: make a buffer for loading textures
     Texture snow("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/snow.jpg");
     Texture grass("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/grass.jpg");
     Texture dirt("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/dirt.jpg");
+    Texture dumbo("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/retud.jpg");
+    Texture tile("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/tile.jpg");
 
     FT_Set_Pixel_Sizes(face, 0, 48);  
 
     std::map<char, Character> Characters;
 
+    // should make this a initilize function
     for (unsigned char c = 0; c < 128; c++)
     {
         // load character glyph 
@@ -242,7 +276,10 @@ int main()
     // uncomment this call to draw in wireframe polygons. 1/2
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     ourShader.use();
-    
+
+    // initilize enemy
+    Enemy enemy;
+
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -271,6 +308,7 @@ int main()
         snow.bind(GL_TEXTURE1);
         ourShader.setInt("texture2", 1);
         dirt.bind(GL_TEXTURE2);
+        //tile.bind(GL_TEXTURE2);
         ourShader.setInt("texture3", 2);
         
         // pass projection matrix to shader (note that in this case it could change every frame)
@@ -292,6 +330,34 @@ int main()
             glDrawElements(GL_TRIANGLES, planeArray[i].indicesLength , GL_UNSIGNED_INT,0);
         }
         glBindVertexArray(0);
+
+        // ok this will only happen on jumpscare
+        if(jumpscareFlag)
+        {
+            // start the play sound, need something so it only goes once
+            glm::mat4 textProjection = glm::ortho(0.0f, 800.0f, 0.0f, 600.0f);
+            jumpShader.use();
+            jumpShader.setMat4("projection", textProjection);
+            dumbo.bind(GL_TEXTURE0);
+            jumpShader.setInt("texture0", 0);
+            glBindVertexArray(jumpScare.VAO);
+            glDrawElements(GL_TRIANGLES, jumpScare.indicesLength, GL_UNSIGNED_INT, 0);
+        }
+
+        // x and y cords
+        RenderText(textShader, Characters, VAO3, VBO3, "x - " + std::to_string(camera.Position.x),
+            550.0f, 50.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
+        RenderText(textShader, Characters, VAO3, VBO3, "y - " + std::to_string(camera.Position.y),
+            550.0f, 75.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
+        RenderText(textShader, Characters, VAO3, VBO3, "z - " + std::to_string(camera.Position.z),
+            550.0f, 100.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
+        
+        RenderText(textShader, Characters, VAO3, VBO3, "Enemy x - " + std::to_string(enemy.myPos.x),
+            550.0f, 125.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
+        RenderText(textShader, Characters, VAO3, VBO3, "Enemy y - " + std::to_string(enemy.myPos.y),
+            550.0f, 150.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
+        RenderText(textShader, Characters, VAO3, VBO3, "Enemy Distance - " + std::to_string(enemy.distance),
+            550.0f, 175.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
 
         if(axisOn)
         {
@@ -316,7 +382,6 @@ int main()
                 550.0f, 125.0f, 0.4f, glm::vec3(0.0f, 1.0f, 1.0f));
             RenderText(textShader, Characters, VAO3, VBO3, "GREEN = - Y Axis",
                 550.0f, 100.0f, 0.4f, glm::vec3(0.0f, 1.0f, 0.0f));
-             
 
             RenderText(textShader, Characters, VAO3, VBO3, "RED = + X Axis",
                 550.0f, 175.0f, 0.4f, glm::vec3(1.0f, 0.0f, 0.0f));
@@ -334,6 +399,11 @@ int main()
         frame_tracker++;
             
         if (elapsed >= 1.0f){
+            // update enemy on secon mark
+            if(enemy.updateEnemyPos(glm::vec3(camera.Position.x, camera.Position.y , 0.0f))) 
+                jumpscareFlag = true;
+            //std::cout << enemy.myPos.x << " " << enemy.myPos.y <<'\n';
+
             if(framesOn)
                 frameCountText = std::to_string(frame_tracker);
             //std::cout << frame_tracker << "\n";
@@ -380,6 +450,7 @@ int main()
         planeArray[i].deleteBuffers();
     }
     axis.deleteBuffers();
+    jumpScare.deleteBuffers();
     glDeleteVertexArrays(1, &VAO3);
     glDeleteBuffers(1, &VBO3);
 

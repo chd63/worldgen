@@ -279,20 +279,27 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/gtc/matrix_transform.inl \
   /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/gtc/type_ptr.hpp \
   /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/gtc/type_ptr.inl \
+  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/miniaudio.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/shader.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/stb_image.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/biome.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/camera.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/chunk.h \
+  /home/dev/projects_for_fun/opengl_projects/worldgen/src/enemy.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/object.h \
+  /home/dev/projects_for_fun/opengl_projects/worldgen/src/soundengine.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/text.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h \
   /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/KHR/khrplatform.h \
   /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
   /usr/include/assert.h \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/any \
@@ -552,6 +559,7 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
   /usr/include/ctype.h \
+  /usr/include/dlfcn.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
   /usr/include/features-time64.h \
@@ -563,8 +571,13 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/poll.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/setjmp.h \
@@ -580,15 +593,22 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/dl_find_object.h \
+  /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/eventfd.h \
   /usr/include/x86_64-linux-gnu/bits/fenv.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -607,6 +627,7 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/poll.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -629,6 +650,9 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -636,6 +660,7 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -667,6 +692,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
@@ -703,8 +730,12 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/eventfd.h \
+  /usr/include/x86_64-linux-gnu/sys/poll.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/x86_64-linux-gnu/sys/ucontext.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
@@ -733,6 +764,12 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/x86_64-linux-gnu/sys/poll.h:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:
@@ -755,8 +792,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
@@ -764,6 +799,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
@@ -779,6 +816,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
+/usr/include/x86_64-linux-gnu/bits/poll.h:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
@@ -791,13 +830,25 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
+/usr/include/x86_64-linux-gnu/bits/eventfd.h:
+
 /usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/dl_find_object.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
 /usr/include/wctype.h:
 
@@ -807,9 +858,23 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/locale.h:
 
+/usr/include/linux/types.h:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/linux/stat.h:
+
+/usr/include/linux/posix_types.h:
+
 /usr/include/linux/limits.h:
 
 /usr/include/linux/close_range.h:
+
+/usr/include/fenv.h:
+
+/usr/include/errno.h:
+
+/usr/include/c++/13/vector:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_relational.hpp:
 
@@ -854,6 +919,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_clip_space.inl:
+
+/usr/include/asm-generic/posix_types.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/gtc/constants.inl:
 
@@ -985,6 +1052,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
 /usr/include/c++/13/bits/stl_multimap.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/type_mat3x4.hpp:
@@ -992,6 +1061,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/c++/13/backward/auto_ptr.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/mat3x2.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/eventfd.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
@@ -1041,6 +1112,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_float4x2_precision.hpp:
 
+/usr/include/asm-generic/int-ll64.h:
+
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/ftstdlib.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/setup.hpp:
@@ -1051,6 +1124,10 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/type_mat3x2.hpp:
 
+/usr/include/inttypes.h:
+
+/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_bool1.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_float2.hpp:
@@ -1060,8 +1137,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/c++/13/bits/std_mutex.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_double4x3.hpp:
-
-/usr/include/c++/13/vector:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/type_mat2x2.hpp:
 
@@ -1074,8 +1149,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_double3_precision.hpp:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/type_vec3.inl:
-
-/usr/include/c++/13/tr1/legendre_function.tcc:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_float3x2.hpp:
 
@@ -1179,6 +1252,12 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/c++/13/tr1/legendre_function.tcc:
+
+/usr/include/asm-generic/types.h:
+
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/quaternion_double.hpp:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/config/ftconfig.h:
@@ -1225,6 +1304,10 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/c++/13/iomanip:
 
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/home/dev/projects_for_fun/opengl_projects/worldgen/src/soundengine.h:
+
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_double3.hpp:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/_fixes.hpp:
@@ -1265,6 +1348,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/c++/13/any:
 
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
 /usr/include/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -1276,6 +1361,10 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_float4x3.hpp:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_double4x4_precision.hpp:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/13/bits/string_view.tcc:
 
@@ -1451,10 +1540,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_double4x2.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/libintl.h:
-
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fterrdef.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
@@ -1466,6 +1551,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_double4x3_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/poll.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/scalar_constants.hpp:
 
@@ -1499,6 +1586,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/gtc/type_ptr.inl:
 
+/usr/include/c++/13/bits/locale_facets_nonio.h:
+
 /usr/include/c++/13/bits/stl_numeric.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/stb_image.h:
@@ -1511,6 +1600,12 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/src/camera.h:
 
+/home/dev/projects_for_fun/opengl_projects/worldgen/src/enemy.h:
+
+/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_double2x3_precision.hpp:
+
+/usr/include/c++/13/bits/quoted_string.h:
+
 /home/dev/projects_for_fun/opengl_projects/worldgen/src/object.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h:
@@ -1518,6 +1613,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/vec3.hpp:
 
 /usr/include/c++/13/ext/concurrence.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 
 /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h:
 
@@ -1585,8 +1682,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/c++/13/bits/fs_ops.h:
 
-/usr/include/fenv.h:
-
 /usr/include/c++/13/bits/fs_path.h:
 
 /usr/include/c++/13/bits/functexcept.h:
@@ -1645,8 +1740,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
-/usr/include/c++/13/bits/locale_facets_nonio.h:
-
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/quaternion_trigonometric.inl:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
@@ -1683,13 +1776,11 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h:
 
+/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/miniaudio.h:
+
 /usr/include/c++/13/bits/predefined_ops.h:
 
 /usr/include/c++/13/bits/ptr_traits.h:
-
-/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_double2x3_precision.hpp:
-
-/usr/include/c++/13/bits/quoted_string.h:
 
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
@@ -1707,6 +1798,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
 /usr/include/signal.h:
 
 /usr/include/c++/13/tr1/hypergeometric.tcc:
@@ -1718,6 +1811,12 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/c++/13/bits/regex.h:
 
 /usr/include/c++/13/bits/regex_scanner.h:
+
+/usr/include/limits.h:
+
+/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/_vectorize.hpp:
+
+/usr/include/c++/13/cstdlib:
 
 /usr/include/c++/13/bits/slice_array.h:
 
@@ -1738,12 +1837,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
 
 /usr/include/c++/13/tr1/bessel_function.tcc:
-
-/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/detail/_vectorize.hpp:
-
-/usr/include/c++/13/cstdlib:
-
-/usr/include/limits.h:
 
 /usr/include/c++/13/bits/stl_algo.h:
 
@@ -1796,6 +1889,8 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/matrix_float2x3_precision.hpp:
 
 /usr/include/c++/13/bits/stream_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -1882,10 +1977,6 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/c++/13/deque:
-
-/home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glm/ext/vector_bool1.hpp:
-
-/usr/include/inttypes.h:
 
 /usr/include/c++/13/exception:
 
@@ -2000,5 +2091,3 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: /home/dev/projects_for_fun/open
 /usr/include/c++/13/bits/atomic_base.h:
 
 /usr/include/c++/13/variant:
-
-/usr/include/errno.h:

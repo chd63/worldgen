@@ -7,6 +7,7 @@
 #include <unordered_map>
 #include <string>
 #include <math.h>
+#include <algorithm>
 
 enum Camera_Movement{
     FORWARD,
@@ -27,6 +28,7 @@ const float PITCH = 0.0f;
 const float SPEED = 2.5f;
 const float SENSITIVITY = 0.003f;
 const float ZOOM = 90.0f;
+const float OFFSET = 1024.0f;
 
 class Camera
 {
@@ -46,21 +48,26 @@ public:
     float Zoom;
     // fps flagg
     bool fpsFlag = false;
+    float biomeOffset= 1024.0f;
 
+    // I need to mess around with offset
     // constructor with vectors
-    Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 0.0f, 1.0f), float yaw = YAW, float pitch = PITCH) : Front(glm::vec3(0.0f, 1.0f, 0.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
+    Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 0.0f, 1.0f), float offset = OFFSET, float yaw = YAW, float pitch = PITCH) : Front(glm::vec3(0.0f, 1.0f, 0.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
     {
+        biomeOffset = offset;
         Position = position;
         WorldUp = up;
         Yaw = yaw;
         Pitch = pitch;
         updateCameraVectors();
     }
+
     // constructor with scalar values
-    Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch) : Front(glm::vec3(0.0f, 1.0f, 0.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
+    Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float offset, float yaw, float pitch) : Front(glm::vec3(0.0f, 1.0f, 0.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
     {
         Position = glm::vec3(posX, posY, posZ);
         WorldUp = glm::vec3(upX, upY, upZ);
+        biomeOffset = offset;
         Yaw = yaw;
         Pitch = pitch;
         updateCameraVectors();
@@ -107,18 +114,9 @@ public:
             int x = std::floor((Position.x / vertexSize));
             int y = std::floor((Position.y / vertexSize));
 
-            // THIS IS HACK
-            // THIS IS HACK
-            // THIS IS HACK
-            // THIS IS HACK
-            // the minus 1 is because we want to start one prior
-            if(x < 0)
-                x = 1024 + x - 1; // 512 is length of a biome, this needs to be updated, so its not a magic number
-            if(y < 0)
-                y = 1024 + y - 1; 
+            if(x < 0) x = biomeOffset + x - 1;
+            if(y < 0) y = biomeOffset + y - 1;
 
-            std::string temp = std::to_string(y) + " " + std::to_string(x) ;
-            //std::cout << temp << '\n';
             try
             {
                 //std::cout << heightMap[y][x] << '\n';
@@ -169,6 +167,13 @@ private:
         // Right handed coordinate system: +X to the right, +Z up
         Right = glm::normalize(glm::cross(Front, WorldUp));
         Up    = glm::normalize(glm::cross(Right, Front));   
+    }
+
+    int wrapIndex(int value, int size)
+    {
+        value %= size;
+        if (value < 0) value += size;
+        return value;
     }
 };
 

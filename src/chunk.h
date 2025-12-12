@@ -21,6 +21,7 @@ public:
 
     float triangleLength = 0.05f;
     float planeLength = 1.0f;
+    float biomeOffset= 1024.0f;
 
     Chunk(){}
 
@@ -34,12 +35,13 @@ public:
         createChunk(triangleLength, planeLength);
     }
 
-    Chunk(float trianglelength, float planelength, glm::vec3 origin, float** heightarray)
+    Chunk(float trianglelength, float planelength, glm::vec3 origin, float** heightarray, float biomeoffset)
     {   
         triangleLength = trianglelength;
         heightArray = heightarray;
         planeLength = planelength;
         localOrigin = origin;
+        biomeOffset = biomeoffset;
         createChunk(triangleLength, planeLength);
     }
 
@@ -59,15 +61,12 @@ private:
         int tempOriginX = (int)localOrigin.x;
         int tempOriginY = (int)localOrigin.y;
 
-        // THIS IS HACK
-        // THIS IS HACK
-        // THIS IS HACK
-        // THIS IS HACK
-        if(tempOriginX < 0)
-            tempOriginX = 1024 + tempOriginX - 1; // 512 is length of a biome, this needs to be updated, so its not a magic number
-        if(tempOriginY < 0)
-            tempOriginY = 1024 + tempOriginY - 1;
- 
+        // I might be dumb
+        if(tempOriginX < 0) tempOriginX = biomeOffset + tempOriginX - 1;
+        if(tempOriginY < 0) tempOriginY = biomeOffset + tempOriginY - 1;
+
+        // std::cout << " x " << tempOriginX << " y " << tempOriginY << '\n';
+        // std::cout << " this is value 0 " << heightArray[25][25] << '\n';
         //col
         for(int i = 0; i < sideLength ; i++)
         {   
@@ -82,18 +81,11 @@ private:
                 else
                 {
                     vertices[vertex_index + 2] = heightArray[tempOriginY + i][tempOriginX + j];
+                    //vertices[vertex_index + 2] = 0.0f;
                 }
 
                 vertices[vertex_index + 3] = static_cast<float>(j * tLength);
                 vertices[vertex_index + 4] = static_cast<float>(i * tLength);
-
-                // std::string temp= std::to_string(i) + " " + std::to_string(j);
-                // if(heightArray == nullptr)
-                //     heightMap[temp] =  0.0f;
-                // else
-                // {
-                //     heightMap[temp] = heightArray[tempOriginY + i][tempOriginX + j];
-                // }
 
                 vertex_index = vertex_index + VERTEX_COUNT + 2;
             }

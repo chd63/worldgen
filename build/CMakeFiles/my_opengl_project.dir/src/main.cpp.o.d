@@ -405,21 +405,22 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/erase_if.h \
- /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h \
- /home/dev/projects_for_fun/opengl_projects/worldgen/src/biome.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h \
- /usr/include/c++/13/ciso646 /usr/include/c++/13/csetjmp \
- /usr/include/setjmp.h /usr/include/c++/13/cstdarg \
- /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
  /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/bitset \
- /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/pstl/execution_defs.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/worldgen.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/biome.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h \
+ /usr/include/c++/13/ciso646 /usr/include/c++/13/csetjmp \
+ /usr/include/setjmp.h /usr/include/c++/13/cstdarg \
+ /usr/include/c++/13/bitset /usr/include/c++/13/functional \
+ /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/array \
@@ -554,4 +555,29 @@ CMakeFiles/my_opengl_project.dir/src/main.cpp.o: \
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/ftmoderr.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/freetype-2.14.1/include/freetype/fterrdef.h \
  /home/dev/projects_for_fun/opengl_projects/worldgen/src/object.h \
- /home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/texture.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/enemy.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/soundengine.h \
+ /home/dev/projects_for_fun/opengl_projects/worldgen/src/../dependencies/miniaudio.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
+ /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+ /usr/include/dlfcn.h /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
+ /usr/include/x86_64-linux-gnu/bits/dl_find_object.h /usr/include/poll.h \
+ /usr/include/x86_64-linux-gnu/sys/poll.h \
+ /usr/include/x86_64-linux-gnu/bits/poll.h \
+ /usr/include/x86_64-linux-gnu/sys/eventfd.h \
+ /usr/include/x86_64-linux-gnu/bits/eventfd.h

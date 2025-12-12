@@ -5,6 +5,15 @@
 #include <memory>
 #include <math.h>
 
+// set noise heigh map to zero flag
+const bool setNoiseToZero = true;
+
+enum BiomeType{
+    HILLS,
+    FLAT,
+    CITY
+};
+
 class Biome{
 public:
     // 2d array of noise
@@ -22,6 +31,7 @@ public:
     unsigned int step;
     float distroLow;
     float distroHigh;
+    enum BiomeType type = HILLS;
 
     Biome()
         : biomeData(nullptr),
@@ -44,7 +54,21 @@ public:
         biomeData = createNoise();
     }
 
+    Biome(unsigned int sidelength , unsigned int stepA , float distrolow , float distrohigh, enum BiomeType biometype)
+    {
+        sideLength = sidelength;
+        step = stepA;
+        distroLow = distrolow;
+        distroHigh = distrohigh;
+        type = biometype;
+
+        // will call noise wich will edit the 2d array
+        biomeData = createNoise();
+    }
+
 private:
+
+    // make a function for each biome, or allow for biome editing
 
     //TODO :FIX THIS YOU RETARD
     //TODO :FIX THIS YOU RETARD
@@ -115,7 +139,14 @@ private:
                 }
                 else
                 {
-                    finilizedArray[y][x] = value;
+                    if(type == FLAT)
+                    {
+                        finilizedArray[y][x] = 0.0f;
+                    }
+                    else
+                    {
+                       finilizedArray[y][x] = value; 
+                    }
                 }
                 
             }

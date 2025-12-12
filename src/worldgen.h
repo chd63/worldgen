@@ -3,13 +3,14 @@
 #include "biome.h"
 #include "chunk.h"
 
+
 class World
 {
 public:
     // variables & data
-    const int step = 32;
-    const int distroLow = -10.0f;
-    const int distroHigh = 40.0f;
+    int step = 32;
+    int distroLow = -10.0f;
+    int distroHigh = 40.0f;
 
     // render distance
     unsigned int renderDistance = 4;
@@ -21,36 +22,59 @@ public:
 
     float chunkSize = 32.0f;
     float triangleSize = 1.0f; // TODO: make a constructor to change this
-    int numberOfChunks = 25;
+    int numberOfChunks = 25;  // 9, 25 
     std::vector<std::unique_ptr<Chunk>> chunks;
 
     // constructor
     World()
     {
-        // calculate start this will be the most bottom left value
-        float start = ( (numberOfBiomes / 4) * biomeSideLength ) * -1;
-        float end  = (numberOfBiomes / 4) * biomeSideLength ;
-
-        //std::cout << start << " " << end << '\n';
-
-        for(float x = start; x < end; x += biomeSideLength)
-        {
-            for(float y = start; y < end; y += biomeSideLength)
-            {
-                // generate a biome
-                Biome tempBiome(biomeSideLength, step , distroLow , distroHigh);
-
-                std::string key= std::to_string(x) + " " + std::to_string(y);
-
-                //std::cout << key << '\n';
-                // insert biome into hashmap at location
-                biomes[key] = tempBiome;
-
-            }
-        }
-        //std::cout << biomes["0.000000 0.000000"].biomeData[10][10] << '\n';
-
+        generateBiomes();
     }     
+
+    World(float numberofbiome, float biomesidelength)
+    {
+        numberOfBiomes = numberofbiome;
+        biomeSideLength = biomesidelength;
+        generateBiomes();
+    }     
+
+    World(float numberofbiome, float biomesidelength, float chunksize)
+    {
+        numberOfBiomes = numberofbiome;
+        biomeSideLength = biomesidelength;
+        chunkSize = chunksize;
+        generateBiomes();
+    }    
+    
+    World(float numberofbiome, float biomesidelength, float chunksize, int numberofchunks)
+    {
+        numberOfBiomes = numberofbiome;
+        biomeSideLength = biomesidelength;
+        chunkSize = chunksize;
+        numberOfChunks = numberofchunks;
+        generateBiomes();
+    }   
+
+    World(float numberofbiome, float biomesidelength, float chunksize, int numberofchunks, int stepin)
+    {
+        numberOfBiomes = numberofbiome;
+        biomeSideLength = biomesidelength;
+        chunkSize = chunksize;
+        numberOfChunks = numberofchunks;
+        step = stepin;
+        generateBiomes();
+    }   
+
+    World(float numberofbiome, float biomesidelength, float chunksize, int numberofchunks, int stepin, int distrolow, int distrohigh)
+    {
+        numberOfBiomes = numberofbiome;
+        biomeSideLength = biomesidelength;
+        chunkSize = chunksize;
+        numberOfChunks = numberofchunks;
+        step = stepin;
+        generateBiomes();
+    }   
+
 
     // update player position
     void updatePlayerPosition(glm::vec3 newPlayerPos)
@@ -87,7 +111,7 @@ public:
 
             // get the y value of the specific input
             // std::cout << originX << " " << originY << '\n';
-            chunks.push_back(std::make_unique<Chunk>( triangleSize, chunkSize,glm::vec3(originX,originY, 0.0f ), biomes[key].biomeData));
+            chunks.push_back(std::make_unique<Chunk>( triangleSize, chunkSize,glm::vec3(originX,originY, 0.0f ), biomes[key].biomeData, biomeSideLength));
 
             if(sideValue == sideLength - 1)
             {
@@ -114,14 +138,44 @@ public:
 
     Biome returnCurrentBiomeArrayByPosition(glm::vec3 playerPos)
     {
+        // TODO: PROBABLY FIX THE CONEVENTION
+        // x is y and y is x
+        // THE CONVENTION WAS FLIPPED FUCK 
         float x = std::floor((playerPos.x / biomeSideLength)) * biomeSideLength;
         float y = std::floor((playerPos.y / biomeSideLength)) * biomeSideLength;
-        std::string temp = std::to_string(y) + " " + std::to_string(x) ;
+        std::string temp = std::to_string(x) + " " + std::to_string(y) ;
+
         //std::cout << temp << '\n';
         return biomes[temp];
     }
 
 private:
+
+    void generateBiomes()
+    {
+        // calculate start this will be the most bottom left value
+        float start = ( (numberOfBiomes / 4) * biomeSideLength ) * -1;
+        float end  = (numberOfBiomes / 4) * biomeSideLength ;
+
+        //std::cout << start << " " << end << '\n';
+
+        for(float x = start; x < end; x += biomeSideLength)
+        {
+            for(float y = start; y < end; y += biomeSideLength)
+            {
+                // generate a biome
+                Biome tempBiome(biomeSideLength, step , distroLow , distroHigh);
+
+                std::string key= std::to_string(x) + " " + std::to_string(y);
+
+                //std::cout << key << '\n';
+                // insert biome into hashmap at location
+                biomes[key] = tempBiome;
+
+            }
+        }
+        //std::cout << biomes["0.000000 0.000000"].biomeData[10][10] << '\n';        
+    }
 
 
 };
