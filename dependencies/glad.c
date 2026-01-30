@@ -22,7 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include </home/dev/projects_for_fun/opengl_projects/worldgen/dependencies/glad.h>
+#include <glad.h>
 
 static void* get_proc(const char *namez);
 

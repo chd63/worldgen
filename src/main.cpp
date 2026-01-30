@@ -72,7 +72,7 @@ int main()
     }
 
     FT_Face face;
-    if (FT_New_Face(ft, "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 0, &face))
+    if (FT_New_Face(ft, "../fonts/DejaVuSans.ttf", 0, &face))
     {
         std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;  
         return -1;
