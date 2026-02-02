@@ -35,7 +35,7 @@ rule CXX_COMPILER__my_opengl_project_unscanned_
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__my_opengl_project_
-  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -62,7 +62,7 @@ rule C_COMPILER__glfw_unscanned_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__glfw_
-  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -91,7 +91,7 @@ rule RC_COMPILER__freetype_unscanned_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__freetype_
-  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -100,7 +100,7 @@ rule C_STATIC_LIBRARY_LINKER__freetype_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\mingw64\bin\cmake.exe --regenerate-during-build -SE:\worldgen -BE:\worldgen\build
+  command = C:\mingw64\bin\cmake.exe --regenerate-during-build -SC:\Users\chasd\Projects\worldgen -BC:\Users\chasd\Projects\worldgen\build
   description = Re-running CMake...
   generator = 1
 

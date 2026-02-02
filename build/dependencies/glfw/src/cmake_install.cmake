@@ -1,4 +1,4 @@
-# Install script for directory: E:/worldgen/dependencies/glfw/src
+# Install script for directory: C:/Users/chasd/Projects/worldgen/dependencies/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

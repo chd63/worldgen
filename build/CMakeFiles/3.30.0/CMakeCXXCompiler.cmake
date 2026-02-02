@@ -87,9 +87,9 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/mingw64/include/c++/14.1.0;C:/mingw64/include/c++/14.1.0/x86_64-w64-mingw32;C:/mingw64/include/c++/14.1.0/backward;C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include;C:/mingw64/include;C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include-fixed;C:/mingw64/x86_64-w64-mingw32/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/mingw64/include/c++/14.1.0;C:/mingw64/include/c++/14.1.0/x86_64-w64-mingw32;C:/mingw64/include/c++/14.1.0/backward;C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include;C:/mingw64/include;C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include-fixed;C:/mingw64/x86_64-w64-mingw32/include;/MinGW/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc_s;gcc;mingwex;kernel32")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0;C:/mingw64/lib/gcc;C:/mingw64/x86_64-w64-mingw32/lib;C:/mingw64/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0;C:/mingw64/lib/gcc;C:/mingw64/x86_64-w64-mingw32/lib;C:/mingw64/lib;/MinGW/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 

@@ -70,9 +70,10 @@ int main()
         std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
         return -1;
     }
-
+    #include <filesystem>
+    std::cout << "Current path is: " << std::filesystem::current_path() << std::endl;
     FT_Face face;
-    if (FT_New_Face(ft, "../fonts/DejaVuSans.ttf", 0, &face))
+    if (FT_New_Face(ft, "assets/fonts/DejaVuSans.ttf", 0, &face))
     {
         std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;  
         return -1;

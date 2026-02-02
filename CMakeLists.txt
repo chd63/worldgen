@@ -1,4 +1,4 @@
-# chatgpt was used to make this file
+# chatgpt was used to generate this file
 
 cmake_minimum_required(VERSION 3.10)
 project(my_opengl_project VERSION 0.1.0)

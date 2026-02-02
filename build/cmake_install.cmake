@@ -1,4 +1,4 @@
-# Install script for directory: E:/worldgen
+# Install script for directory: C:/Users/chasd/Projects/worldgen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/worldgen/build/dependencies/glfw/cmake_install.cmake")
-  include("E:/worldgen/build/dependencies/freetype-2.14.1/cmake_install.cmake")
+  include("C:/Users/chasd/Projects/worldgen/build/dependencies/glfw/cmake_install.cmake")
+  include("C:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/cmake_install.cmake")
 
 endif()
 
@@ -59,6 +59,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "E:/worldgen/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/chasd/Projects/worldgen/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

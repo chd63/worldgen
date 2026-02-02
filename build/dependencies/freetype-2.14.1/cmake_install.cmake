@@ -1,4 +1,4 @@
-# Install script for directory: E:/worldgen/dependencies/freetype-2.14.1
+# Install script for directory: C:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

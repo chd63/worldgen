@@ -1,4 +1,4 @@
-# Install script for directory: E:/worldgen/dependencies/glfw
+# Install script for directory: C:/Users/chasd/Projects/worldgen/dependencies/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/worldgen/build/dependencies/glfw/src/cmake_install.cmake")
+  include("C:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src/cmake_install.cmake")
 endif()
 
