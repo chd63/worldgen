@@ -70,15 +70,9 @@ private:
 
     // make a function for each biome, or allow for biome editing
 
-    //TODO :FIX THIS YOU RETARD
-    //TODO :FIX THIS YOU RETARD
-    //TODO :FIX THIS YOU RETARD
-    //TODO :FIX THIS YOU RETARD
-    //TODO :FIX THIS YOU RETARD
-    //TODO :FIX THIS YOU RETARD 
     // TODO : the values are fliped for the array it goes y then x
     // probably should fix this
-    // I think this is a bigger issue with the chunk or something 
+    // as it may create future problems
     float** createNoise()
     {
         // large step few grid points, smooth

@@ -50,12 +50,16 @@ build CMakeFiles/my_opengl_project.dir/src/main.cpp.obj: CXX_COMPILER__my_opengl
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include
   OBJECT_DIR = CMakeFiles\my_opengl_project.dir
   OBJECT_FILE_DIR = CMakeFiles\my_opengl_project.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\my_opengl_project.dir\
+  TARGET_PDB = my_opengl_project.pdb
 
 build CMakeFiles/my_opengl_project.dir/dependencies/glad.c.obj: C_COMPILER__my_opengl_project_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glad.c || cmake_object_order_depends_target_my_opengl_project
   DEP_FILE = CMakeFiles\my_opengl_project.dir\dependencies\glad.c.obj.d
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include
   OBJECT_DIR = CMakeFiles\my_opengl_project.dir
   OBJECT_FILE_DIR = CMakeFiles\my_opengl_project.dir\dependencies
+  TARGET_COMPILE_PDB = CMakeFiles\my_opengl_project.dir\
+  TARGET_PDB = my_opengl_project.pdb
 
 
 # =============================================================================
@@ -70,9 +74,10 @@ build my_opengl_project.exe: CXX_EXECUTABLE_LINKER__my_opengl_project_ CMakeFile
   OBJECT_DIR = CMakeFiles\my_opengl_project.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\my_opengl_project.dir\
   TARGET_FILE = my_opengl_project.exe
   TARGET_IMPLIB = libmy_opengl_project.dll.a
-  TARGET_PDB = my_opengl_project.exe.dbg
+  TARGET_PDB = my_opengl_project.pdb
 
 
 #############################################
@@ -194,6 +199,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/context.c.obj: C_COMPILER__glfw_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -202,6 +209,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_uns
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -210,6 +219,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_un
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -218,6 +229,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/platform.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -226,6 +239,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -234,6 +249,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_u
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -242,6 +259,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_u
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -250,6 +269,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__g
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -258,6 +279,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -266,6 +289,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glf
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -274,6 +299,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -282,6 +309,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__g
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -290,6 +319,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/win32_module.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -298,6 +329,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/win32_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -306,6 +339,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__gl
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/win32_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -314,6 +349,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/win32_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -322,6 +359,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__gl
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/win32_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -330,6 +369,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/win32_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -338,6 +379,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/win32_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -346,6 +389,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 build dependencies/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__glfw_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/wgl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_GLFW_WIN32 -D_UNICODE
@@ -354,6 +399,8 @@ build dependencies/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__g
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/include -IC:/Users/chasd/Projects/worldgen/dependencies/glfw/src -IC:/Users/chasd/Projects/worldgen/build/dependencies/glfw/src
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 
 # =============================================================================
@@ -367,8 +414,9 @@ build dependencies/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_ dependenc
   OBJECT_DIR = dependencies\glfw\src\CMakeFiles\glfw.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = dependencies\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_FILE = dependencies\glfw\src\libglfw3.a
-  TARGET_PDB = glfw3.a.dbg
+  TARGET_PDB = dependencies\glfw\src\libglfw3.pdb
 
 
 #############################################
@@ -451,6 +499,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/autofit/autofit.c
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\autofit
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbase.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftbase.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -458,6 +508,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbase.c.obj
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbbox.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftbbox.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -465,6 +517,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbbox.c.obj
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbdf.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftbdf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -472,6 +526,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbdf.c.obj:
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbitmap.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftbitmap.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -479,6 +535,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftcid.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftcid.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -486,6 +544,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftcid.c.obj:
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftfstype.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftfstype.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -493,6 +553,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftfstype.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftgasp.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftgasp.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -500,6 +562,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftgasp.c.obj
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftglyph.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftglyph.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -507,6 +571,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftglyph.c.ob
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftgxval.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftgxval.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -514,6 +580,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftgxval.c.ob
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftinit.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftinit.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -521,6 +589,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftinit.c.obj
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftmm.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftmm.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -528,6 +598,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftmm.c.obj: 
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftotval.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftotval.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -535,6 +607,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftotval.c.ob
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftpatent.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftpatent.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -542,6 +616,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftpatent.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftpfr.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftpfr.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -549,6 +625,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftpfr.c.obj:
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftstroke.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftstroke.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -556,6 +634,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftstroke.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftsynth.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftsynth.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -563,6 +643,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftsynth.c.ob
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/fttype1.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/fttype1.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -570,6 +652,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/fttype1.c.ob
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftwinfnt.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -577,6 +661,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/bdf/bdf.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/bdf/bdf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -584,6 +670,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/bdf/bdf.c.obj: C_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\bdf
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/bzip2/ftbzip2.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -591,6 +679,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\bzip2
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/cache/ftcache.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/cache/ftcache.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -598,6 +688,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/cache/ftcache.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\cache
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/cff/cff.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/cff/cff.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -605,6 +697,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/cff/cff.c.obj: C_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\cff
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/cid/type1cid.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/cid/type1cid.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -612,6 +706,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/cid/type1cid.c.ob
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\cid
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/gzip/ftgzip.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -619,6 +715,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.obj
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\gzip
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/lzw/ftlzw.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -626,6 +724,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.obj: 
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\lzw
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/pcf/pcf.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/pcf/pcf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -633,6 +733,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/pcf/pcf.c.obj: C_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\pcf
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/pfr/pfr.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/pfr/pfr.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -640,6 +742,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/pfr/pfr.c.obj: C_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\pfr
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/psaux/psaux.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/psaux/psaux.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -647,6 +751,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/psaux/psaux.c.obj
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\psaux
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/pshinter/pshinter.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -654,6 +760,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/pshinter/pshinter
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\pshinter
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/psnames/psnames.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/psnames/psnames.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -661,6 +769,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/psnames/psnames.c
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\psnames
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/raster/raster.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/raster/raster.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -668,6 +778,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/raster/raster.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\raster
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/sdf/sdf.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/sdf/sdf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -675,6 +787,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/sdf/sdf.c.obj: C_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\sdf
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/sfnt/sfnt.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -682,6 +796,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.obj: 
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\sfnt
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/smooth/smooth.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/smooth/smooth.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -689,6 +805,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/smooth/smooth.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\smooth
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/svg/svg.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/svg/svg.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -696,6 +814,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/svg/svg.c.obj: C_
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\svg
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/truetype/truetype.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/truetype/truetype.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -703,6 +823,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/truetype/truetype
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\truetype
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/type1/type1.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/type1/type1.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -710,6 +832,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/type1/type1.c.obj
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\type1
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/type42/type42.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/type42/type42.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -717,6 +841,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/type42/type42.c.o
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\type42
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/winfonts/winfnt.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -724,6 +850,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/winfonts/winfnt.c
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\winfonts
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/builds/windows/ftsystem.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/builds/windows/ftsystem.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -731,6 +859,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/builds/windows/ftsyst
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\builds\windows
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/builds/windows/ftdebug.c.obj: C_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/builds/windows/ftdebug.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -738,6 +868,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/builds/windows/ftdebu
   INCLUDES = -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -IC:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\builds\windows
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftver.rc.obj: RC_COMPILER__freetype_unscanned_ C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/src/base/ftver.rc || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -745,6 +877,8 @@ build dependencies/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftver.rc.obj
   INCLUDES = -I C:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include -I C:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/include -I C:/Users/chasd/Projects/worldgen/build/dependencies/freetype-2.14.1/include/freetype/config
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   OBJECT_FILE_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\src\base
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 
 # =============================================================================
@@ -758,8 +892,9 @@ build dependencies/freetype-2.14.1/libfreetype.a: C_STATIC_LIBRARY_LINKER__freet
   OBJECT_DIR = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = dependencies\freetype-2.14.1\CMakeFiles\freetype.dir\freetype.pdb
   TARGET_FILE = dependencies\freetype-2.14.1\libfreetype.a
-  TARGET_PDB = freetype.a.dbg
+  TARGET_PDB = dependencies\freetype-2.14.1\libfreetype.pdb
 
 
 #############################################
@@ -861,14 +996,14 @@ build dependencies/glfw/src/all: phony dependencies/glfw/src/libglfw3.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/chasd/Projects/worldgen/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/builds/cmake/FindBrotliDec.cmake C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3.pc.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3Config.cmake.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/CMakeLists.txt C$:/mingw64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePushCheckState.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/mingw64/share/cmake-3.30/Modules/CPack.cmake C$:/mingw64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckSymbolExists.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/FindBZip2.cmake C$:/mingw64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPNG.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPkgConfig.cmake C$:/mingw64/share/cmake-3.30/Modules/FindThreads.cmake C$:/mingw64/share/cmake-3.30/Modules/FindZLIB.cmake C$:/mingw64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/mingw64/share/cmake-3.30/Modules/SelectLibraryConfigurations.cmake C$:/mingw64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/mingw64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/chasd/Projects/worldgen/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/builds/cmake/FindBrotliDec.cmake C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3.pc.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3Config.cmake.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/CMakeLists.txt C$:/mingw64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/mingw64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePushCheckState.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CPack.cmake C$:/mingw64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckSymbolExists.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/FindBZip2.cmake C$:/mingw64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPNG.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPkgConfig.cmake C$:/mingw64/share/cmake-3.30/Modules/FindThreads.cmake C$:/mingw64/share/cmake-3.30/Modules/FindZLIB.cmake C$:/mingw64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/mingw64/share/cmake-3.30/Modules/SelectLibraryConfigurations.cmake C$:/mingw64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/mingw64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/chasd/Projects/worldgen/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/builds/cmake/FindBrotliDec.cmake C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3.pc.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3Config.cmake.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/CMakeLists.txt C$:/mingw64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePushCheckState.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/mingw64/share/cmake-3.30/Modules/CPack.cmake C$:/mingw64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckSymbolExists.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/FindBZip2.cmake C$:/mingw64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPNG.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPkgConfig.cmake C$:/mingw64/share/cmake-3.30/Modules/FindThreads.cmake C$:/mingw64/share/cmake-3.30/Modules/FindZLIB.cmake C$:/mingw64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/mingw64/share/cmake-3.30/Modules/SelectLibraryConfigurations.cmake C$:/mingw64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/mingw64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake: phony
+build C$:/Users/chasd/Projects/worldgen/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/freetype-2.14.1/builds/cmake/FindBrotliDec.cmake C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMakeLists.txt C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3.pc.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/CMake/glfw3Config.cmake.in C$:/Users/chasd/Projects/worldgen/dependencies/glfw/src/CMakeLists.txt C$:/mingw64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/mingw64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/mingw64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakePushCheckState.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/mingw64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/CPack.cmake C$:/mingw64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/mingw64/share/cmake-3.30/Modules/CheckSymbolExists.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/mingw64/share/cmake-3.30/Modules/FindBZip2.cmake C$:/mingw64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPNG.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/mingw64/share/cmake-3.30/Modules/FindPkgConfig.cmake C$:/mingw64/share/cmake-3.30/Modules/FindThreads.cmake C$:/mingw64/share/cmake-3.30/Modules/FindZLIB.cmake C$:/mingw64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/mingw64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/mingw64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/mingw64/share/cmake-3.30/Modules/SelectLibraryConfigurations.cmake C$:/mingw64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/mingw64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake: phony
 
 
 #############################################

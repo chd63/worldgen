@@ -100,7 +100,7 @@ public:
 
     void createBuffers()
     {   
-        //set the buffers -> this might need to be sworked on when I have better understanding
+        //set the buffers -> this might need to be worked on when I have better understanding
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
         glGenBuffers(1, &EBO);

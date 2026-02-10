@@ -48,3 +48,5 @@ target_link_libraries(my_opengl_project
 if(WIN32)
     target_link_libraries(my_opengl_project PRIVATE gdi32)
 endif()
+
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/assets" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")

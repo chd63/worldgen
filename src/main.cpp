@@ -12,7 +12,7 @@
 #include "text.h"
 #include "object.h"
 #include "texture.h"
-#include "enemy.h"
+#include "utility.h"
 #include <ft2build.h>
 #include FT_FREETYPE_H  
 
@@ -56,7 +56,6 @@ float elapsed = 0.0f;
 int frame_tracker = 0;
 bool framesOn = true;
 bool axisOn = false;
-bool jumpscareFlag = false;
 std::string frameCountText = "DEFAULT";
 const float STANDARD_PLANE_LENGTH = 250.0;
 const float TRIANGLE_LENGTH = 1.0;
@@ -73,7 +72,8 @@ int main()
     #include <filesystem>
     std::cout << "Current path is: " << std::filesystem::current_path() << std::endl;
     FT_Face face;
-    if (FT_New_Face(ft, "assets/fonts/DejaVuSans.ttf", 0, &face))
+    fs::path font_path = get_base_path() / "assets" / "fonts" / "DejaVuSans.ttf";
+    if (FT_New_Face(ft, font_path.string().c_str() , 0, &face))
     {
         std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;  
         return -1;
@@ -120,18 +120,21 @@ int main()
 
     // build and compile our shader program
     // ------------------------------------
-    // use reletive file for rn
-    Shader ourShader("/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/shader_1.vss",
-         "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/shader_1.fss"); // you can name your shader files however you like
+    fs::path vshader = get_base_path() / "assets" / "shaders" / "shader_1.vss";
+    fs::path fshader = get_base_path() / "assets" / "shaders" / "shader_1.fss";
+    Shader ourShader(vshader.string().c_str(), fshader.string().c_str()); 
 
-    Shader axisShader("/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/axisShader.vss",
-         "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/axisShader.fss");
+    vshader = get_base_path() / "assets" / "shaders" / "axisShader.vss";
+    fshader = get_base_path() / "assets" / "shaders" / "axisShader.fss";
+    Shader axisShader(vshader.string().c_str(), fshader.string().c_str()); 
 
-    Shader textShader("/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/textShader.vss",
-         "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/textShader.fss");
+    vshader = get_base_path() / "assets" / "shaders" / "textShader.vss";
+    fshader = get_base_path() / "assets" / "shaders" / "textShader.fss";
+    Shader textShader(vshader.string().c_str(), fshader.string().c_str()); 
 
-    Shader jumpShader("/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/jumpScare.vss",
-         "/home/dev/projects_for_fun/opengl_projects/worldgen/shaders/jumpScare.fss");
+    vshader = get_base_path() / "assets" / "shaders" / "jumpScare.vss";
+    fshader = get_base_path() / "assets" / "shaders" / "jumpScare.fss";
+    Shader jumpShader(vshader.string().c_str(), fshader.string().c_str());
 
 
     // x y z
@@ -204,12 +207,15 @@ int main()
     }
     //std::cout << world.biomes["0.000000 0.000000"].biomeData[10][10] << '\n';
 
-    // TODO: make a buffer for loading textures
-    Texture snow("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/snow.jpg");
-    Texture grass("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/grass.jpg");
-    Texture dirt("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/dirt.jpg");
-    Texture dumbo("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/retud.jpg");
-    Texture tile("/home/dev/projects_for_fun/opengl_projects/worldgen/textures/tile.jpg");
+    // TODO: protect loading textures better, either wait, or have a safe default texture or color
+    fs::path texturePath = get_base_path() / "assets" / "textures" / "snow.jpg";
+    Texture snow(texturePath.string().c_str());
+    texturePath = get_base_path() / "assets" / "textures" / "grass.jpg";
+    Texture grass(texturePath.string().c_str());
+    texturePath = get_base_path() / "assets" / "textures" / "dirt.jpg";
+    Texture dirt(texturePath.string().c_str());
+    texturePath = get_base_path() / "assets" / "textures" / "tile.jpg";
+    Texture tile(texturePath.string().c_str());
 
     FT_Set_Pixel_Sizes(face, 0, 48);  
 
@@ -278,9 +284,6 @@ int main()
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     ourShader.use();
 
-    // initilize enemy
-    Enemy enemy;
-
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -332,18 +335,6 @@ int main()
         }
         glBindVertexArray(0);
 
-        // ok this will only happen on jumpscare
-        if(jumpscareFlag)
-        {
-            // start the play sound, need something so it only goes once
-            glm::mat4 textProjection = glm::ortho(0.0f, 800.0f, 0.0f, 600.0f);
-            jumpShader.use();
-            jumpShader.setMat4("projection", textProjection);
-            dumbo.bind(GL_TEXTURE0);
-            jumpShader.setInt("texture0", 0);
-            glBindVertexArray(jumpScare.VAO);
-            glDrawElements(GL_TRIANGLES, jumpScare.indicesLength, GL_UNSIGNED_INT, 0);
-        }
 
         // x and y cords
         RenderText(textShader, Characters, VAO3, VBO3, "x - " + std::to_string(camera.Position.x),
@@ -353,12 +344,6 @@ int main()
         RenderText(textShader, Characters, VAO3, VBO3, "z - " + std::to_string(camera.Position.z),
             550.0f, 100.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
         
-        RenderText(textShader, Characters, VAO3, VBO3, "Enemy x - " + std::to_string(enemy.myPos.x),
-            550.0f, 125.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
-        RenderText(textShader, Characters, VAO3, VBO3, "Enemy y - " + std::to_string(enemy.myPos.y),
-            550.0f, 150.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
-        RenderText(textShader, Characters, VAO3, VBO3, "Enemy Distance - " + std::to_string(enemy.distance),
-            550.0f, 175.0f, 0.4f, glm::vec3(1.0f, 1.0f, 0.0f));
 
         if(axisOn)
         {
@@ -400,10 +385,6 @@ int main()
         frame_tracker++;
             
         if (elapsed >= 1.0f){
-            // update enemy on secon mark
-            if(enemy.updateEnemyPos(glm::vec3(camera.Position.x, camera.Position.y , 0.0f))) 
-                jumpscareFlag = true;
-            //std::cout << enemy.myPos.x << " " << enemy.myPos.y <<'\n';
 
             if(framesOn)
                 frameCountText = std::to_string(frame_tracker);

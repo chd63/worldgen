@@ -9,6 +9,9 @@
 #include <math.h>
 #include <algorithm>
 
+// TODO: make a barrior on camera movement, if player goes to far to stop them
+// from exiting checking distance
+
 enum Camera_Movement{
     FORWARD,
     BACKWARD,

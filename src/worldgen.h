@@ -8,9 +8,9 @@ class World
 {
 public:
     // variables & data
-    int step = 32;
-    int distroLow = -10.0f;
-    int distroHigh = 40.0f;
+    int step = 64;  // this will be the smoothness
+    int distroLow = -10.0f; // This will be the lowest point 
+    int distroHigh = 40.0f; // this will be the highest point
 
     // render distance
     unsigned int renderDistance = 4;
@@ -22,7 +22,9 @@ public:
 
     float chunkSize = 32.0f;
     float triangleSize = 1.0f; // TODO: make a constructor to change this
-    int numberOfChunks = 25;  // 9, 25 
+    // TODO: create a function to produce a new grid depending on render distance length
+    // add plus 2 to the length  each additional render distance
+    int numberOfChunks = 81;  // 9, 25, 49  // This number an offcenter in the middle 
     std::vector<std::unique_ptr<Chunk>> chunks;
 
     // constructor
