@@ -132,10 +132,6 @@ int main()
     fshader = get_base_path() / "assets" / "shaders" / "textShader.fss";
     Shader textShader(vshader.string().c_str(), fshader.string().c_str()); 
 
-    vshader = get_base_path() / "assets" / "shaders" / "jumpScare.vss";
-    fshader = get_base_path() / "assets" / "shaders" / "jumpScare.fss";
-    Shader jumpShader(vshader.string().c_str(), fshader.string().c_str());
-
 
     // x y z
     // create a vector of of lines to demontrate the axis
@@ -171,15 +167,12 @@ int main()
         1, 2, 3   // second Triangle
     };
 
-    Object jumpScare(quadVertices, 16, squareIn, 6, glm::vec2(0.0f,0.0f),2,2);
-    jumpScare.createBuffers();
-
     // create world
 
     //World world;
     // I should make a struct that I can pull these from 
     // or variables at the top
-    World world(16, biomesize, 16, 9 ,64);
+    World world(16, biomesize, 16, 81 ,64);
 
     world.updatePlayerPosition(glm::vec3(0.0,0.0,1.0));
 
@@ -432,7 +425,6 @@ int main()
         planeArray[i].deleteBuffers();
     }
     axis.deleteBuffers();
-    jumpScare.deleteBuffers();
     glDeleteVertexArrays(1, &VAO3);
     glDeleteBuffers(1, &VBO3);
 
